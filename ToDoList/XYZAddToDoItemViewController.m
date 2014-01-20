@@ -15,6 +15,7 @@
 }
 
 @property (nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *sum;
 @property (nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
@@ -42,8 +43,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-	// Do any additional setup after loading the view.
+    self.sum.text =@"test";
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

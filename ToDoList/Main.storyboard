@@ -87,6 +87,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="doneButton" destination="xBe-Fk-5mj" id="ugM-40-b5G"/>
+                        <outlet property="sum" destination="bO8-0z-Uyg" id="hYt-cj-eB4"/>
+                        <outlet property="summary" destination="bO8-0z-Uyg" id="gBk-ke-ghf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOr-TH-Uzy" userLabel="First Responder" sceneMemberID="firstResponder"/>

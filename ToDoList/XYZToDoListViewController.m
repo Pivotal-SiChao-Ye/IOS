@@ -9,7 +9,6 @@
 #import "XYZToDoListViewController.h"
 #import "XYZToDoItem.h"
 #import "XYZAddToDoItemViewController.h"
-#import "JSONParser.h"
 
 #define string @"HUUUU"
 @interface XYZToDoListViewController () {
@@ -19,7 +18,6 @@
 }
 
 @property NSMutableArray *toDoItems;
-@property JSONParser *parser;
 @property NSMutableArray *movies;
 @property int pagenum;
 
@@ -141,7 +139,9 @@ int pagenum;
     refreshMe.attributedTitle = [[NSAttributedString alloc] initWithString:
                                  @"Refreshing data..."];
     // TODO: do stuffs here
+    if (pagelimit < 40){
     pagelimit = pagelimit + 10;
+    }
     NSString *update = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?limit=%d&country=us&apikey=3ju33k3tweekjjkvcfbw6h9j", pagelimit];
     NSLog(@"%@",update);
     url = [NSURL URLWithString:update];
